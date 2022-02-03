@@ -1,11 +1,13 @@
 \documentclass[a4paper]{report}
 
+\usepackage{import}
+\usepackage{graphicx}
+
 \title{A Serious Document}
 \author{Me, Myself and I}
 \date{\today}
 
 \begin{document}
-
 
 \maketitle
 
@@ -20,20 +22,22 @@
 \input{introduction.tex}
 
 \chapter{Very Serious Point}
-\input{veryseriouspoint.tex}
+\import{chapter1/}{section1.tex}
+\import{chapter1/}{section2.tex}
+\import{chapter1/}{section3.tex}
 
-\section{Another Point}
-\input{anotherpoint.tex}
+\chapter{Another Point}
+\import{chapter2}{section2-1.tex}
+\import{chapter2}{section2-2.tex}
+\import{chapter2}{section2-3.tex}
 
-\section{My Argument Continues}
-\input{myargumentcontinues.tex}
-
-\section{A Further Point}
-\input{afurtherpoint.tex}
+\chapter{My Argument Continues}
 
 
-\section{conclusions}
-\input{conclusions.tex}
+\chapter{A Further Point}
+
+
+\chapter{conclusions}
 
 \appendix
 
